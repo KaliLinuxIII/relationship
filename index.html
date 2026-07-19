@@ -134,7 +134,8 @@ function updateTimer(){
     const days = Math.floor(totalHours/24);
 
 
-    // Months with decimal progress
+    // Months with 6 decimal precision
+
     let months = (now.getFullYear() - startDate.getFullYear()) * 12;
     months += now.getMonth() - startDate.getMonth();
 
@@ -163,6 +164,8 @@ function updateTimer(){
 
     document.getElementById("time").innerHTML = `
          ${exactMonths.toFixed(6)} Months<br>
+         ${(exactMonths / 12).toFixed(6)} Years<br>
+         ${(days / 7).toFixed(6)} Weeks<br>
          ${days} Days<br>
          ${hours} Hours<br>
          ${minutes} Minutes<br>
