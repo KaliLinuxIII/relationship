@@ -99,7 +99,7 @@ h1{
 <div class="hearts" id="hearts"></div>
 
 <div class="container">
-    <h1>❤️ Time Since Official ❤️</h1>
+    <h1>Time Since Official:</h1>
     <div class="subtitle">March 29, 2026 • 10:35:37 AM</div>
 
     <div id="time"></div>
@@ -132,11 +132,11 @@ function updateTimer(){
     const days = Math.floor(totalHours/24);
 
     document.getElementById("time").innerHTML = `
-        ❤️ ${days} Days<br>
-        ❤️ ${hours} Hours<br>
-        ❤️ ${minutes} Minutes<br>
-        ❤️ ${seconds} Seconds<br>
-        ❤️ ${ms.toString().padStart(3,"0")} Milliseconds
+         ${days} Days<br>
+         ${hours} Hours<br>
+         ${minutes} Minutes<br>
+         ${seconds} Seconds<br>
+         ${ms.toString().padStart(3,"0")} Milliseconds
     `;
 }
 
@@ -145,7 +145,7 @@ updateTimer();
 
 const hearts = document.getElementById("hearts");
 
-for(let i=0;i<120;i++){
+for(let i=0;i<500;i++){
 
     const h = document.createElement("div");
     h.className = "heart";
